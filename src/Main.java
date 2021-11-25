@@ -18,25 +18,10 @@ public class Main extends Application{
     //Initialisation
     primaryStage.setTitle("Runner"); //tittle window
     Group root = new Group(); //initialisation du root
-
-    //
-    Scene firstScene = new Scene(root,600,400);
-    primaryStage.setScene(firstScene);//in a window which are scene length and width
-    Button btn=new Button("<PLAY>");
-    root.getChildren().add(btn);
-    btn.setLayoutX(275);
-    btn.setLayoutY(175);
-    btn.setOnAction(new EventHandler<ActionEvent>() {
-      @Override
-      public void handle(ActionEvent event) {
-        GameScene game = new GameScene(root,800,400); // creation de la scene
-        primaryStage.setScene(game);
-      }
-    });
-//    GameScene game = new GameScene(root,800,400); // creation de la scene
-//    primaryStage.setScene(game);
-//    primaryStage.show();
+    GameScene game = new GameScene(root,800,400); // creation de la scene
+    primaryStage.setScene(game);
     primaryStage.show();
+    System.out.println("Use Space to attack and arrow_up to jump");
   }
 
   public static void main(String[] args) {
