@@ -21,12 +21,12 @@ public class GameScene extends Scene {
     private Foe foe;
     private double x; //position de foe
     private Integer random;
-    //HitBox du hero.
+    //HitBox du hero
     private double xHitBox;
     private double yHitBox;
     private double withHitBox;
     private double lengthHitBox;
-    //HitBox des ennemies
+    //HitBox des ennemis
     private double xHitBoxFoe;
     private double yHitBoxFoe;
     private double withHitBoxFoe;
