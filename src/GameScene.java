@@ -200,7 +200,7 @@ public class GameScene extends Scene {
 
                 if (nbrlives==3){
                     timer.stop();
-                    GameOver = new StaticThing(90,90,"GameOver.PNG",0,0,800,400);
+                    GameOver = new StaticThing(100,100,"GameOver.PNG",0,0,800,400);
                     root.getChildren().add(GameOver.getSprite());
                 }
             }
