@@ -21,6 +21,7 @@ public class GameScene extends Scene {
     private Foe foe;
     private double x; //position de foe
     private Integer random;
+    private StaticThing GameOver;
     //HitBox du hero
     private double xHitBox;
     private double yHitBox;
@@ -127,6 +128,7 @@ public class GameScene extends Scene {
                     withHitBox + yHitBox > yHitBoxFoe) {
                 this.collision = true;
                 this.invinsible = 100;
+                foe.addY(2000);
             }
         }
     }
@@ -136,6 +138,7 @@ public class GameScene extends Scene {
         if (x < knight.getX()-300) {
             random = (int)(Math.random() * 2000); //random spawn of foe
             x = x + 1500 + Math.random();
+            foe.addY(200);
         }
     }
     //Fin Fonction
@@ -188,10 +191,18 @@ public class GameScene extends Scene {
                     livesUpdate(); //update le sprite du nombre de vies
                     root.getChildren().add(livesSprite); //Display heart
 
+
+
                 }
                     //Update de la camera
                 camera.update();
                 render();
+
+                if (nbrlives==3){
+                    timer.stop();
+                    GameOver = new StaticThing(90,90,"GameOver.PNG",0,0,800,400);
+                    root.getChildren().add(GameOver.getSprite());
+                }
             }
         };
         timer.start();
