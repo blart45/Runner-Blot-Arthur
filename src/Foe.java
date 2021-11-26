@@ -25,7 +25,7 @@ public class Foe extends AnimatedThing {
 
     //Constructor
     public Foe() {
-        super(0, 0, "foe.png"); //Copyright from Nahiala665 Thanks Nahiala665 for the design !!
+        super(0, 0, "foe.png"); //Copyright from Nahiala665. Thanks Nahiala665 for the design !!
         this.x = 1500;
         this.y = 200;
         super.getAnimatedSprite().setViewport(new Rectangle2D(0,0,160,110));
